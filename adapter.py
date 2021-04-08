@@ -23,7 +23,7 @@ class Adapter:
             'trans_refNum': initiate_payment_request['orderId'],
             'disp_paymentType': 'CC',
             'url_redirect': initiate_payment_request['redirectUrl'],
-            'url_notify': initiate_payment_request['notificationUrl'],
+            'notification_url': initiate_payment_request['notificationUrl'],
         }
 
         signature_key = 'signature'
@@ -40,7 +40,7 @@ class Adapter:
         concatenated_transaction += str(transaction['trans_currency'])
         concatenated_transaction += str(transaction['trans_type'])
         concatenated_transaction += str(transaction['disp_paymentType'])
-        concatenated_transaction += str(transaction['url_notify'])
+        concatenated_transaction += str(transaction['notification_url'])
         concatenated_transaction += str(transaction['url_redirect'])
         concatenated_transaction += str(self.HASH_CODE)
 
@@ -59,7 +59,7 @@ class Adapter:
         redirect_url += '&trans_currency=' + str(transaction['trans_currency'])
         redirect_url += '&trans_type=' + str(transaction['trans_type'])
         redirect_url += '&disp_paymentType=' + str(transaction['disp_paymentType'])
-        redirect_url += '&url_notify=' + urllib.parse.quote_plus(transaction['url_notify'])
+        redirect_url += '&notification_url=' + urllib.parse.quote_plus(transaction['notification_url'])
         redirect_url += '&url_redirect=' + urllib.parse.quote_plus(transaction['url_redirect'])
         redirect_url += '&signature=' + transaction['signature']
 

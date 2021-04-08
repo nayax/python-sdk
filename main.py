@@ -1,6 +1,9 @@
-import adapter
+import adapter as nayax
 
-myAdd = adapter.Adapter('5787743', 'YWVGU8GM4L')
+merchant_id = '{{ your merchant id}}'
+hash_code = '{{ your hash code}}'
+
+nayax_adapter = nayax.Adapter(merchant_id, hash_code)
 
 initiate_payment_request = {
     'amount': 1.23,
@@ -11,4 +14,9 @@ initiate_payment_request = {
     'notificationUrl': 'http://example.com',
 }
 
-redirect_url = myAdd.initiate_payment(initiate_payment_request)
+# to get redirect url
+redirect_url = nayax_adapter.initiate_payment(initiate_payment_request)
+
+# to handle notification - GET/POST
+# notification = {}
+# notification_result = nayax_adapter.handle_notification(notification)
