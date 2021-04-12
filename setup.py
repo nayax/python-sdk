@@ -9,7 +9,7 @@ setup(
     author='Serjo Agronov',  # Type in your name
     author_email='serjoagronovdev@gmail.com',  # Type in your E-Mail
     url='https://github.com/nayax/python-sdk',  # Provide either the link to your github or to your website
-    download_url='https://github.com/nayax/python-sdk',  # I explain this later on
+    download_url='https://github.com/nayax/python-sdk/archive/refs/tags/v1.0.tar.gz',
     keywords=['Nayax', 'Python', 'SDK', 'API'],  # Keywords that define your package best
     install_requires=[  # I get to this in a second
     ],
