@@ -1,4 +1,4 @@
-import adapter as nayax
+import nayax.adapter as nayax
 
 merchant_id = '{{ your merchant id}}'
 hash_code = '{{ your hash code}}'
